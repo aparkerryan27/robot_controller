@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -pthread  -rdynamic CMakeFiles/robot_controller.dir/src/main.cpp.o CMakeFiles/robot_controller.dir/src/joystick.cpp.o CMakeFiles/robot_controller.dir/src/controller.cpp.o CMakeFiles/robot_controller.dir/src/pserial.cpp.o  -o robot_controller 

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/controller.h
+stdint.h
+-
+
+../include/pserial.h
+fcntl.h
+-
+errno.h
+-
+termios.h
+-
+unistd.h
+-
+string.h
+-
+stdio.h
+-
+iostream
+-
+controller.h
+../include/controller.h
+
+/home/parker/esp/robot/controller/robot_controller/src/pserial.cpp
+pserial.h
+/home/parker/esp/robot/controller/robot_controller/src/pserial.h
+
