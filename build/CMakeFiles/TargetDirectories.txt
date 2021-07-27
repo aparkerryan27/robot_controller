@@ -1,3 +1,0 @@
-/home/parker/esp/robot_controller/build/CMakeFiles/rebuild_cache.dir
-/home/parker/esp/robot_controller/build/CMakeFiles/edit_cache.dir
-/home/parker/esp/robot_controller/build/CMakeFiles/robot_controller.dir
