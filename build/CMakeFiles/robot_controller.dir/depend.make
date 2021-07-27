@@ -9,10 +9,10 @@ CMakeFiles/robot_controller.dir/src/joystick.cpp.o: ../src/joystick.cpp
 
 CMakeFiles/robot_controller.dir/src/main.cpp.o: ../include/controller.h
 CMakeFiles/robot_controller.dir/src/main.cpp.o: ../include/joystick.h
-CMakeFiles/robot_controller.dir/src/main.cpp.o: ../include/pserial.h
+CMakeFiles/robot_controller.dir/src/main.cpp.o: ../include/ptcp.h
 CMakeFiles/robot_controller.dir/src/main.cpp.o: ../src/main.cpp
 
-CMakeFiles/robot_controller.dir/src/pserial.cpp.o: ../include/controller.h
-CMakeFiles/robot_controller.dir/src/pserial.cpp.o: ../include/pserial.h
-CMakeFiles/robot_controller.dir/src/pserial.cpp.o: ../src/pserial.cpp
+CMakeFiles/robot_controller.dir/src/ptcp.cpp.o: ../include/controller.h
+CMakeFiles/robot_controller.dir/src/ptcp.cpp.o: ../include/ptcp.h
+CMakeFiles/robot_controller.dir/src/ptcp.cpp.o: ../src/ptcp.cpp
 

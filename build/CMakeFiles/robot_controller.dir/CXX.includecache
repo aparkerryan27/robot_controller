@@ -10,25 +10,23 @@
 stdint.h
 -
 
-../include/pserial.h
-fcntl.h
--
-errno.h
--
-termios.h
+../include/ptcp.h
+iostream
 -
 unistd.h
 -
-string.h
--
 stdio.h
 -
-iostream
+sys/socket.h
+-
+stdlib.h
+-
+arpa/inet.h
 -
 controller.h
 ../include/controller.h
 
-/home/parker/esp/robot/controller/robot_controller/src/pserial.cpp
-pserial.h
-/home/parker/esp/robot/controller/robot_controller/src/pserial.h
+/home/parker/esp/robot_controller/src/ptcp.cpp
+ptcp.h
+/home/parker/esp/robot_controller/src/ptcp.h
 

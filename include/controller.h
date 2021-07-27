@@ -19,32 +19,24 @@ struct location {
     int theta;
 };
 
-struct Controller{
-    
-public:
+int normalize(int raw_js_value);
 
-    void run_instruction();
+void run_instruction();
 
-    int velocity (int pwm);
-    
-    //convert a translational distance for the robot into a pwm and time value
-    //pass by reference
-    void for_distance (int dist, int *pwm, int *seconds);
+int velocity (int pwm);
 
-    //when standing stil
-    //convert a desired turn angle in radians to pwms for both motors in opposite directions for a given amount of time
-    //pass by reference
-    int for_rotation (int angle, int *pwm, int *seconds);
+//convert a translational distance for the robot into a pwm and time value
+//pass by reference
+void for_distance (int dist, int *pwm, int *seconds);
 
-    //when moving
-    int for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1, int total_time);
+//when standing stil
+//convert a desired turn angle in radians to pwms for both motors in opposite directions for a given amount of time
+//pass by reference
+void for_rotation (int angle, int *pwm, int *seconds);
 
-    //send pwm commands for a given amount of time appropriately and then stop
-    int run_instruction (int pwm1, int pwm2, int seconds);
+//when moving
+int for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1, int total_time);
 
-private:
-    bool isRunning = true;
-    //int acceleration_to_pwm(int a)?
-};
+//int acceleration_to_pwm(int a)?
 
 #endif //CONTROLLER_H

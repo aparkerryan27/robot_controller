@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/parker/esp/robot/controller/robot_controller/src/controller.cpp" "/home/parker/esp/robot/controller/robot_controller/build/CMakeFiles/robot_controller.dir/src/controller.cpp.o"
-  "/home/parker/esp/robot/controller/robot_controller/src/joystick.cpp" "/home/parker/esp/robot/controller/robot_controller/build/CMakeFiles/robot_controller.dir/src/joystick.cpp.o"
-  "/home/parker/esp/robot/controller/robot_controller/src/main.cpp" "/home/parker/esp/robot/controller/robot_controller/build/CMakeFiles/robot_controller.dir/src/main.cpp.o"
-  "/home/parker/esp/robot/controller/robot_controller/src/pserial.cpp" "/home/parker/esp/robot/controller/robot_controller/build/CMakeFiles/robot_controller.dir/src/pserial.cpp.o"
+  "/home/parker/esp/robot_controller/src/controller.cpp" "/home/parker/esp/robot_controller/build/CMakeFiles/robot_controller.dir/src/controller.cpp.o"
+  "/home/parker/esp/robot_controller/src/joystick.cpp" "/home/parker/esp/robot_controller/build/CMakeFiles/robot_controller.dir/src/joystick.cpp.o"
+  "/home/parker/esp/robot_controller/src/main.cpp" "/home/parker/esp/robot_controller/build/CMakeFiles/robot_controller.dir/src/main.cpp.o"
+  "/home/parker/esp/robot_controller/src/ptcp.cpp" "/home/parker/esp/robot_controller/build/CMakeFiles/robot_controller.dir/src/ptcp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

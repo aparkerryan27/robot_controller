@@ -15,7 +15,7 @@ void serial_init(){
         cout << "Error " << errno << " from tcgetattr: " << strerror(errno) << std::endl;
     }
 
-    cout << "Port " << port << " opened succesfully\n";
+    cout << "Port " << port << " opened\n";
     /* Save old tty parameters */
     tty_old = tty;
 

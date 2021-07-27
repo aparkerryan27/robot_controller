@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parker/esp/robot/controller/robot_controller
+CMAKE_SOURCE_DIR = /home/parker/esp/robot_controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parker/esp/robot/controller/robot_controller/build
+CMAKE_BINARY_DIR = /home/parker/esp/robot_controller/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parker/esp/robot/controller/robot_controller/build/CMakeFiles /home/parker/esp/robot/controller/robot_controller/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parker/esp/robot_controller/build/CMakeFiles /home/parker/esp/robot_controller/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parker/esp/robot/controller/robot_controller/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parker/esp/robot_controller/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,32 +204,32 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/pserial.o: src/pserial.cpp.o
+src/ptcp.o: src/ptcp.cpp.o
 
-.PHONY : src/pserial.o
+.PHONY : src/ptcp.o
 
 # target to build an object file
-src/pserial.cpp.o:
-	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/pserial.cpp.o
-.PHONY : src/pserial.cpp.o
+src/ptcp.cpp.o:
+	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/ptcp.cpp.o
+.PHONY : src/ptcp.cpp.o
 
-src/pserial.i: src/pserial.cpp.i
+src/ptcp.i: src/ptcp.cpp.i
 
-.PHONY : src/pserial.i
+.PHONY : src/ptcp.i
 
 # target to preprocess a source file
-src/pserial.cpp.i:
-	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/pserial.cpp.i
-.PHONY : src/pserial.cpp.i
+src/ptcp.cpp.i:
+	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/ptcp.cpp.i
+.PHONY : src/ptcp.cpp.i
 
-src/pserial.s: src/pserial.cpp.s
+src/ptcp.s: src/ptcp.cpp.s
 
-.PHONY : src/pserial.s
+.PHONY : src/ptcp.s
 
 # target to generate assembly for a file
-src/pserial.cpp.s:
-	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/pserial.cpp.s
-.PHONY : src/pserial.cpp.s
+src/ptcp.cpp.s:
+	$(MAKE) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/ptcp.cpp.s
+.PHONY : src/ptcp.cpp.s
 
 # Help Target
 help:
@@ -249,9 +249,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pserial.o"
-	@echo "... src/pserial.i"
-	@echo "... src/pserial.s"
+	@echo "... src/ptcp.o"
+	@echo "... src/ptcp.i"
+	@echo "... src/ptcp.s"
 .PHONY : help
 
 

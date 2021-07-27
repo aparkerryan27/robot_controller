@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot_controller.dir/src/controller.cpp.o"
   "CMakeFiles/robot_controller.dir/src/joystick.cpp.o"
   "CMakeFiles/robot_controller.dir/src/main.cpp.o"
-  "CMakeFiles/robot_controller.dir/src/pserial.cpp.o"
+  "CMakeFiles/robot_controller.dir/src/ptcp.cpp.o"
   "robot_controller"
   "robot_controller.pdb"
 )

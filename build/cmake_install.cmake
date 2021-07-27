@@ -1,4 +1,4 @@
-# Install script for directory: /home/parker/esp/robot/controller/robot_controller
+# Install script for directory: /home/parker/esp/robot_controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/parker/esp/robot/controller/robot_controller/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/parker/esp/robot_controller/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
