@@ -2,13 +2,9 @@
 #include <stdio.h>
 
 #include <iostream>
+#include <math.h>
 
 using namespace std;
-
-#define THETA_ERROR 0.01
-#define DIST_ERROR 0.01
-
-#define FORWARD_PWM 200
 
 //TODO: - normalize these values to PWMs more precisely
 int normalize(int raw_js_value) {
@@ -27,13 +23,6 @@ int velocity (int pwm) {
     return 0;
 }
 
-void move_to_x(int x, struct location cur_loc, struct motor_data *motors) {
-    if (cur_loc.x < x){
-        motors->axis1 += FORWARD_PWM;
-        motors->axis2 += FORWARD_PWM;
-    }
-}
-
 //convert a translational distance for the robot into a pwm and time value, pass by reference
 void for_distance (int dist, int *pwm, int *seconds) {
     
@@ -44,11 +33,44 @@ void for_distance (int dist, int *pwm, int *seconds) {
 //when standing still
 //convert a desired turn angle in radians to pwms for both motors in opposite directions for a given amount of time
 //pass by reference
-void for_rotation (int angle, int *pwm, int *seconds) {
+void for_rotation (int angle, int *pwm) {
     return;
 }
 
 //when moving
 void for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1) {
     return;
+}
+
+void set_pwm_for_dest(struct location dest, struct location rob_loc, struct motor_data md) {
+    //rotate until the angle is correct for the location
+    bool turn_right = true;
+    double angle_to_dest = atan2 ( (dest.y - rob_loc.y), (dest.x, rob_loc.x) ); //if input is degrees, multiply input by (pi/180)
+    double curr_angle = rob_loc.theta - 180;
+
+    if (curr_angle > angle_to_dest + THETA_ERROR) {
+        //turn counter clockwise
+        md.axis1 = -1 * ROTATE_PWM;
+        md.axis2 =  1 * ROTATE_PWM;
+
+    } else if (curr_angle < angle_to_dest - THETA_ERROR) {
+        //turn clockwise
+        md.axis1 =  1 * ROTATE_PWM;
+        md.axis2 = -1 * ROTATE_PWM;
+
+    } else {
+        //rotation is acceptable move forward
+
+        if (dist_between_loc(rob_loc, dest) > DIST_ERROR) {
+            //TODO: slow down the PWMs here until it reaches the destination
+            //move forward
+            md.axis1 = FORWARD_PWM;
+            md.axis2 = FORWARD_PWM;
+        } 
+    }
+}
+
+//quadratic formula bitch
+int dist_between_loc(struct location loc1, struct location loc2) {
+    return sqrt(pow(loc2.x - loc1.x, 2) + pow(loc2.y - loc1.y, 2));
 }

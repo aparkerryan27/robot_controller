@@ -1,12 +1,13 @@
-//
-// Created by german on 11/21/19.
-//
-
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
 #include <stdint.h> //allows int32 
 
+#define THETA_ERROR 0.01
+#define DIST_ERROR 0.01
+
+#define FORWARD_PWM 200
+#define ROTATE_PWM 100
 
 struct motor_data {
     int32_t axis1;
@@ -37,6 +38,8 @@ void for_rotation (int angle, int *pwm, int *seconds);
 //when moving
 int for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1, int total_time);
 
-//int acceleration_to_pwm(int a)?
+void set_pwm_for_dest(struct location dest, struct location rob_loc, struct motor_data md);
+
+int dist_between_loc(struct location loc1, struct location loc2);
 
 #endif //CONTROLLER_H
