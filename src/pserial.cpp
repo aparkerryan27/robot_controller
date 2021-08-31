@@ -1,3 +1,5 @@
+//Allows a user to initialize and push data to a usb serial device and use as input
+
 #include "pserial.h"
 
 using namespace std;

@@ -33,11 +33,11 @@ int main(int argc, char *argv[]) {
         cout << pipeLine;
 
 
-        //TODO: currently still pulling js values
+        //TODO: currently still pulling joysticks values
         motors->axis1 = normalize(j.axes[1]);
         motors->axis2 = -1 * normalize(j.axes[4]);
 
-        //TODO: uncomment this to compute the next PWM value to send based on the current location to send 
+        //TODO: use this to compute the next PWM value to send based on the current location to send 
         //set_pwm_for_dest(mouse_loc, robot_loc, motors);
 
         int ssent = send_values(motors);

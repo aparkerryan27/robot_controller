@@ -1,3 +1,4 @@
+//Allows a user to establish a TCP connection with a partner and send values over the connection
 #include "ptcp.h"
 
 int sock = 0;
