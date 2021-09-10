@@ -9,7 +9,7 @@ int tcp_connect() {
  
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
-        printf("\n TCP: Socket creation error \n");
+        printf("\nTCP: Socket creation error \n");
         return -1;
     }
    
@@ -19,13 +19,13 @@ int tcp_connect() {
     // Convert IPv4 and IPv6 addresses from text to binary form
     if(inet_pton(AF_INET, IP_ADDR, &serv_addr.sin_addr)<=0) 
     {
-        printf("\n TCP: Invalid address/ Address not supported \n");
+        printf("\nTCP: Invalid address/ Address not supported \n");
         return -1;
     }
    
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
     {
-        printf("\n TCP: Connection Failed \n");
+        printf("\nTCP: Connection Failed \n");
         return -1;
     }
 
