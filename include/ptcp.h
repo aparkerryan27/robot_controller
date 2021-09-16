@@ -9,7 +9,7 @@
 #include "controller.h"
 
 #define PORT 3000
-#define IP_ADDR "192.168.137.72" //TODO: make this an input variable when the program starts up OR have a list of IPs and robot names to match up
+#define IP_ADDR "192.168.137.41" //TODO: make this an input variable when the program starts up OR have a list of IPs and robot names to match up
 
 int tcp_connect();
 

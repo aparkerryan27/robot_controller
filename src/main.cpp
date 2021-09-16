@@ -31,8 +31,10 @@ int main(int argc, char *argv[]) {
 
         //TODO: currently still pulling joysticks values
 
-        motors->axis1 = normalize(j.axes[1]);
-        motors->axis2 = normalize(j.axes[4]);
+        motors->axis1 = 4000; //normalize(j.axes[1]);
+        motors->axis2 = 4000; //normalize(j.axes[4]);
+
+        cout << motors->axis1 << ", " << motors->axis2 << endl;
 
         //TODO: use this to compute the next PWM value to send based on the current location to send 
         //set_pwm_for_dest(mouse_loc, robot_loc, motors);
@@ -43,8 +45,7 @@ int main(int argc, char *argv[]) {
             return -1;
         }
 
-
-       usleep(5000);
+       usleep(50000);
     }
 
         
@@ -56,5 +57,3 @@ int main(int argc, char *argv[]) {
     //auto stop = chrono::high_resolution_clock::now();
     //auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
     //cout << "this took " << duration.count() << " microseconds"<< endl;
-
-
