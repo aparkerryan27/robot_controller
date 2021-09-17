@@ -15,7 +15,7 @@ int normalize(int raw_js_value) {
     // normalize between -512 and 511
     int32_t normalized = raw_js_value * 1024 / range;
     */
-    int normalized = raw_js_value / 32;
+    int normalized = raw_js_value / 16;
     return normalized; //for now, makes everything a positive number so padding can be used properly
 }
 
