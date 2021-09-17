@@ -7,20 +7,17 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
-    struct location *robot_loc;
-    struct location *mouse_loc;
+    struct location robot_loc;
+    struct location mouse_loc;
+    
     //Initialize Motor Struct
     motor_data motors;
-
-    motors.axis1 = 0;
-    motors.axis2 = 0;
-
     string lineInput;
     int x = 0;
 
-    cout << "Starting controller input!!\n";
-    string device("/dev/input/js1");
-    Joystick j(device);
+    //cout << "Starting controller input!!\n";
+    //string device("/dev/input/js1");
+    //Joystick j(device);
 
     int connected = tcp_connect();
     if (connected < 0) {
