@@ -48,8 +48,8 @@ void serial_init(){
 
 }
 
-void write_serial(struct motor_data *motors) {
-    int n_bytes = write( port, motors, sizeof(struct motor_data));
+void write_serial(struct bot_data *motors) {
+    int n_bytes = write( port, motors, sizeof(struct bot_data));
 }
 
 void read_serial(){

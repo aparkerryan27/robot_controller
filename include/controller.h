@@ -9,9 +9,11 @@
 #define FORWARD_PWM 200
 #define ROTATE_PWM 100
 
-struct motor_data {
+struct bot_data {
     int32_t axis1;
     int32_t axis2;
+    bool stimulus_trigger;
+    bool light_trigger;
 };
 
 struct location {
@@ -38,7 +40,7 @@ void for_rotation (int angle, int *pwm, int *seconds);
 //when moving
 int for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1, int total_time);
 
-void set_pwm_for_dest(struct location dest, struct location rob_loc, struct motor_data md);
+void set_pwm_for_dest(struct location dest, struct location rob_loc, struct bot_data md);
 
 int dist_between_loc(struct location loc1, struct location loc2);
 

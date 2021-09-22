@@ -42,7 +42,7 @@ void for_rotation_in_motion (int angle, int cur_pwm0, int cur_pwm1) {
     return;
 }
 
-void set_pwm_for_dest(struct location dest, struct location rob_loc, struct motor_data md) {
+void set_pwm_for_dest(struct location dest, struct location rob_loc, struct bot_data md) {
     //rotate until the angle is correct for the location
     bool turn_right = true;
     double angle_to_dest = atan2 ( (dest.y - rob_loc.y), (dest.x, rob_loc.x) ); //if input is degrees, multiply input by (pi/180)

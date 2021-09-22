@@ -33,9 +33,9 @@ int tcp_connect() {
 }
 
 
-int send_values(motor_data md) {
+int send_values(bot_data bd) {
     //TODO: remove this 8 but make sure the sizeof(struct motor_data) is correct
-    if (send(sock, (void*)&md, sizeof(motor_data) , 0 ) < 0 ){
+    if (send(sock, (void*)&bd, sizeof(bot_data) , 0 ) < 0 ){
         return -1;
     }
     return 0;

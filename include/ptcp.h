@@ -13,6 +13,6 @@
 
 int tcp_connect();
 
-int send_values(motor_data md);
+int send_values(bot_data bd);
 
 int print_rcv_buffer();

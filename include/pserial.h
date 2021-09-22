@@ -17,7 +17,7 @@
 void serial_init();
 
 //writes the motor struct into serial for the ESP32
-void write_serial(struct motor_data *motors);
+void write_serial(struct bot_data *motors);
 
 //reads a single line from the serial input
 void read_serial();
